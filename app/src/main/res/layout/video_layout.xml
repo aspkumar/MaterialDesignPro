@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/video_view"
+        android:layout_below="@+id/play_btn"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/play_btn"
+        android:text="play"/>
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/pause_btn"
+         android:layout_toRightOf="@+id/play_btn"
+         android:text="pause"/>
+
+    <ImageView
+        android:id="@+id/play_pause_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/video_view"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_toEndOf="@+id/pause_btn"
+        android:layout_toRightOf="@+id/pause_btn"
+        app:srcCompat="@android:drawable/star_big_on" />
+
+</RelativeLayout>

@@ -3,6 +3,9 @@
     package="com.example.prasannakumara.materialdesign">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -10,21 +13,23 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true">
+       <!-- <activity android:name=".videostream.VideoMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>
-        <activity android:name=".animations.WelcomeScreen">
+        </activity>-->
+        <activity android:name=".materialViewpagerTabs.MatViewPagerMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:name=".paginationusingRV.MainActivity" />
+        <activity android:name=".videostream.VideoMain"/>
         <!-- <activity android:name=".steppersAPI.SteppersApiMain"/> -->
         <activity android:name=".steppers.SteppersMain" />
         <activity android:name=".menus.MenusMain" />
@@ -34,9 +39,14 @@
         <activity android:name=".chipset.DeleteChipActivity" />
         <activity android:name=".bottomsheet.BottonSheetMain" />
         <activity android:name=".chipset.ChipsetMain" />
-
-        <!-- <activity android:name=".MainActivity"> -->
+        <activity android:name=".videostream.ExoPlayer"/>
+         <!--<activity android:name=".MainActivity"/>-->
         <!--<activity android:name=".animations.WelcomeScreen"></activity>-->
+
+        <meta-data android:name="com.google.android.gms.version"
+        android:value="46" />
     </application>
+
+
 
 </manifest>

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.example.prasannakumara.materialdesign.bottomnavigationview.BottmNav;
 import com.example.prasannakumara.materialdesign.bottomsheet.BottonSheetMain;
@@ -15,6 +16,7 @@ import com.example.prasannakumara.materialdesign.chipset.DeleteChipActivity;
 import com.example.prasannakumara.materialdesign.ripppleeffect.RippleMain;
 import com.example.prasannakumara.materialdesign.steppers.SteppersMain;
 import com.example.prasannakumara.materialdesign.tooltip.TooltipMain;
+import com.example.prasannakumara.materialdesign.videostream.VideoMain;
 
 import java.util.ArrayList;
 
@@ -95,6 +97,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     stepperAPIIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(stepperAPIIntent);
                 }
+                if(position==7)
+                {
+                    Intent stepperAPIIntent=new Intent(context, com.example.prasannakumara.materialdesign.videostream.VideoMain.class);
+                    stepperAPIIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(stepperAPIIntent);
+                }
             }
         });
 
@@ -105,7 +113,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return inputstring.size();
     }
 
-    public class MyViewHoldre extends RecyclerView.ViewHolder {
+    public static class MyViewHoldre extends RecyclerView.ViewHolder {
         TextView componetName;
 
         public MyViewHoldre(View itemView) {

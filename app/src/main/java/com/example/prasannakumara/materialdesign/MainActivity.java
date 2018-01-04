@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         comparr.add(new ComponetsNameModel("Bottom Layout","onething"));
         comparr.add(new ComponetsNameModel("Steppers","sampleSteppers"));
         comparr.add(new ComponetsNameModel("Pagination","sample pagination"));
+        comparr.add(new ComponetsNameModel("Video view","video Streaming"));
+
         recyclerView = (RecyclerView) findViewById(R.id.main_recycler_view);
         RecyclerViewAdapter adapter=new RecyclerViewAdapter(getApplicationContext(),comparr);
         RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
